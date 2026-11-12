@@ -1,0 +1,164 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Smart Campus Scheduler design system.
+ * Primary: deep institutional navy (#1a3a52)
+ * Surface: pale campus blue (#E8F4F8)
+ * Accent: approval green (#27AE60)
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 3px);
+  --radius-md: calc(var(--radius) - 1px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --font-sans: Arial, Helvetica, "Helvetica Neue", sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-year-1: var(--year-1);
+  --color-year-1-foreground: var(--year-1-foreground);
+  --color-year-2: var(--year-2);
+  --color-year-2-foreground: var(--year-2-foreground);
+  --color-year-3: var(--year-3);
+  --color-year-3-foreground: var(--year-3-foreground);
+  --color-year-4: var(--year-4);
+  --color-year-4-foreground: var(--year-4-foreground);
+  --color-chart-1: var(--year-1);
+  --color-chart-2: var(--year-2);
+  --color-chart-3: var(--year-3);
+  --color-chart-4: var(--year-4);
+  --color-chart-5: var(--primary);
+  --color-sidebar: var(--card);
+  --color-sidebar-foreground: var(--card-foreground);
+  --color-sidebar-primary: var(--primary);
+  --color-sidebar-primary-foreground: var(--primary-foreground);
+  --color-sidebar-accent: var(--accent);
+  --color-sidebar-accent-foreground: var(--accent-foreground);
+  --color-sidebar-border: var(--border);
+  --color-sidebar-ring: var(--ring);
+  --shadow-card: 0 1px 2px oklch(0.31 0.05 244 / 0.06), 0 8px 24px oklch(0.31 0.05 244 / 0.08);
+  --shadow-nav: 0 1px 0 oklch(0.31 0.05 244 / 0.12), 0 6px 18px oklch(0.31 0.05 244 / 0.1);
+}
+
+:root {
+  --radius: 0.35rem;
+  --background: oklch(0.982 0.006 230);
+  --foreground: oklch(0.24 0.038 246);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.038 246);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.038 246);
+  --primary: oklch(0.325 0.052 245);
+  --primary-foreground: oklch(0.99 0.004 230);
+  --secondary: oklch(0.955 0.017 220);
+  --secondary-foreground: oklch(0.325 0.052 245);
+  --muted: oklch(0.955 0.014 226);
+  --muted-foreground: oklch(0.52 0.028 244);
+  --accent: oklch(0.947 0.024 222);
+  --accent-foreground: oklch(0.325 0.052 245);
+  --destructive: oklch(0.577 0.216 27);
+  --destructive-foreground: oklch(0.99 0.004 230);
+  --success: oklch(0.65 0.155 152);
+  --success-foreground: oklch(0.99 0.004 230);
+  --warning: oklch(0.79 0.148 78);
+  --warning-foreground: oklch(0.26 0.04 246);
+  --border: oklch(0.9 0.017 227);
+  --input: oklch(0.9 0.017 227);
+  --ring: oklch(0.325 0.052 245);
+  --year-1: oklch(0.93 0.05 240);
+  --year-1-foreground: oklch(0.36 0.12 254);
+  --year-2: oklch(0.93 0.06 152);
+  --year-2-foreground: oklch(0.38 0.1 155);
+  --year-3: oklch(0.94 0.07 90);
+  --year-3-foreground: oklch(0.4 0.1 70);
+  --year-4: oklch(0.93 0.05 22);
+  --year-4-foreground: oklch(0.44 0.16 27);
+}
+
+.dark {
+  --background: oklch(0.2 0.03 246);
+  --foreground: oklch(0.97 0.006 230);
+  --card: oklch(0.25 0.035 246);
+  --card-foreground: oklch(0.97 0.006 230);
+  --popover: oklch(0.25 0.035 246);
+  --popover-foreground: oklch(0.97 0.006 230);
+  --primary: oklch(0.86 0.04 226);
+  --primary-foreground: oklch(0.22 0.035 246);
+  --secondary: oklch(0.3 0.036 246);
+  --secondary-foreground: oklch(0.97 0.006 230);
+  --muted: oklch(0.3 0.036 246);
+  --muted-foreground: oklch(0.74 0.024 234);
+  --accent: oklch(0.32 0.04 246);
+  --accent-foreground: oklch(0.97 0.006 230);
+  --destructive: oklch(0.68 0.19 25);
+  --destructive-foreground: oklch(0.98 0.004 230);
+  --success: oklch(0.7 0.15 152);
+  --success-foreground: oklch(0.2 0.03 246);
+  --warning: oklch(0.82 0.14 80);
+  --warning-foreground: oklch(0.2 0.03 246);
+  --border: oklch(1 0 0 / 14%);
+  --input: oklch(1 0 0 / 18%);
+  --ring: oklch(0.7 0.04 232);
+  --year-1: oklch(0.36 0.08 254);
+  --year-1-foreground: oklch(0.9 0.05 250);
+  --year-2: oklch(0.35 0.08 155);
+  --year-2-foreground: oklch(0.9 0.07 155);
+  --year-3: oklch(0.38 0.08 80);
+  --year-3-foreground: oklch(0.92 0.08 90);
+  --year-4: oklch(0.37 0.1 25);
+  --year-4-foreground: oklch(0.91 0.06 25);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+}
+
+@utility campus-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@utility surface-card {
+  background-color: var(--color-card);
+  color: var(--color-card-foreground);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
